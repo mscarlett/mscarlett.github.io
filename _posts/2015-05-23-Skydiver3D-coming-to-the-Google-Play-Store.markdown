@@ -30,7 +30,7 @@ image: skydiver.png
 		</figure>
 		<p>Libgdx comprises several modules for input, graphics, files, audio, networking, game logic, and math/physics. It enables you to write code once and deploy it to multiple platforms without modification. High-level APIs simplify the rendering of 2D and 3D graphics, however Libgdx gives the option of working with OpenGL directly using Java interfaces. More information is available at the <a href="https://github.com/libgdx/libgdx/wiki" target="_blank">Libgdx wiki</a>.</p>
         <h2>Libgdx design patterns</h2>
-		<p>A game is created using a single class that implements the ApplicationListener interface. It contains the following methods:</p>
+		<p>A game is created using a single Java class that implements the ApplicationListener interface. It contains the following methods:</p>
 		<pre>
 		<code>
 		void create() //Called when the Application is first created.
@@ -53,7 +53,7 @@ image: skydiver.png
 		void show() // Called when this screen becomes the current screen for a Game.
 		</code>
 		</pre>
-		<p>Using the screen interface provides a framework to switch between activities with different user interfaces within a game by switching the current screen.</p>
+		<p>Using the screen interface in combination with the <a href="http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Game.html" target="_blank">Game class</a> provides a simple framework to manage a game with multiple screens.</p>
         <p>A tutorial for creating a minimalistic game is provided at <a href="https://github.com/libgdx/libgdx/wiki/A-simple-game" target="_blank">this tutorial</a>.</p>
 		<h2>Creating the Skydiver 3D game</h2>
 		<p>The game consists of a skydiver who jumps off a plane from 14,000 feet and soars to the ground, earning points for collecting rings and stars. The player can optionally go faster by pressing a lightning bolt icon to get a bonus. Once the skydiver reaches an altitude of 3,000 feet, the player is prompted to open the parachute while an accuracy bar is displayed on the screen. Points are awarded based on the timing of the parachute opening. Once the parachute is opened, the player lands the skydiver on a target as close to the center as possible.</p>
