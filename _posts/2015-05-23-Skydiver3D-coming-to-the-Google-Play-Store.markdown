@@ -20,7 +20,7 @@ image: skydiver.png
             <ul>
                 <li><a href="http://libgdx.badlogicgames.com/documentation.html" target="_blank">Libgdx Getting Started</a></li>
                 <li><a href="http://www.github.com/libgdx/libgdx" target="_blank">GitHub Libgdx Repo</a></li>
-                <li><a href="http://libgdx.badlogicgames.com/gallery.html" target="_blank">Libgdx Gallery</a></li>
+                <li><a href="http://libgdx.badlogicgames.com/gallery.html" target="_blank">Gallery of Libgdx Games</a></li>
             </ul>
         </p>
 	</div>
