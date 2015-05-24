@@ -31,8 +31,7 @@ image: skydiver.png
 		<p>Libgdx comprises several modules for input, graphics, files, audio, networking, game logic, and math/physics. It enables you to write code once and deploy it to multiple platforms without modification. High-level APIs simplify the rendering of 2D and 3D graphics, however Libgdx gives the option of working with OpenGL directly using Java interfaces. More information is available at the <a href="https://github.com/libgdx/libgdx/wiki" target="_blank">Libgdx wiki</a>.</p>
         <h2>Libgdx design patterns</h2>
 		<p>A game is created using a single Java class that implements the ApplicationListener interface. It contains the following methods:</p>
-		<pre>
-		<code>
+		<pre><code>
 		void create() //Called when the Application is first created.
         void dispose() //Called when the Application is destroyed.
         void pause() //Called when the Application is paused.
@@ -42,8 +41,7 @@ image: skydiver.png
 		</code></pre>
 		<p>The create() method allows initialization of game resources by Libgdx, and the dispose() method is used to dispose of any resources which are not garbage collected by Java such as image textures. The render method allows access to the main game loop, which is an infinite loop that gets called each time the screen is ready to be updated.</p>
 		<p>Libgdx provides an interface to represent a screen with the following methods:</p>
-		<pre>
-		<code>
+		<pre><code>
 		void dispose() // Called when this screen should release all resources.
 		void hide() //Called when this screen is no longer the current screen for a Game.
 		void pause() //Called when the Application is paused.
@@ -51,8 +49,7 @@ image: skydiver.png
 		void resize(int width, int height)  //Called when the Application is resized.
 		void resume() //Called when the Application is resumed from a paused state.
 		void show() // Called when this screen becomes the current screen for a Game.
-		</code>
-		</pre>
+		</code></pre>
 		<p>Using the screen interface in combination with the <a href="http://libgdx.badlogicgames.com/nightlies/docs/api/com/badlogic/gdx/Game.html" target="_blank">Game class</a> provides a simple framework to manage a game with multiple screens.</p>
         <p><a href="https://github.com/libgdx/libgdx/wiki/A-simple-game" target="_blank">This tutorial</a> describes how to create a minimalistic game.</p>
 		<h2>Creating the Skydiver 3D game</h2>
