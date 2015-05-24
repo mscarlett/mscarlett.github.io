@@ -15,7 +15,7 @@ image: skydiver.png
 	<div class="span9 columns">
 		<iframe width="420" height="315" src="https://www.youtube.com/embed/-NmvwspVKGo" frameborder="0" allowfullscreen></iframe>
 		<h2>Preface</h2>
-		<p>This past year, I have been experimenting with Java/Android game development by working on a skydiving game. The game uses <a href="http://libgdx.badlogicgames.com/" target="_blank">Libgdx</a>, which provides a unified API that runs on many platforms and abstracts away the low-level graphics implementation to allow for rapid prototyping. The library uses the JNI to provide access to native C code for OpenGL graphics rendering and accelerated math operations. Libgdx also features an API designed to avoid JVM or Android garbage collection by using a custom implementation for loading and deletion game resources. This post will explore the Libgdx framework briefly and provide more details regarding the game that I am planning to release.</p>
+		<p>This past year, I have been experimenting with Java/Android game development by working on a skydiving game. The game uses <a href="http://libgdx.badlogicgames.com/" target="_blank">Libgdx</a>, which provides a unified API that runs on many platforms and abstracts away the low-level graphics implementation to allow for rapid prototyping. The library uses the JNI to provide access to native C code for OpenGL graphics rendering and accelerated math operations. Libgdx also features an API designed to avoid Java garbage collection by using a custom implementation for loading and deletion game resources. This post will explore the Libgdx framework briefly and provide more details regarding the game that I am planning to release.</p>
         <p>
             <ul>
                 <li><a href="http://libgdx.badlogicgames.com/documentation.html" target="_blank">Libgdx Getting Started</a></li>
@@ -23,13 +23,39 @@ image: skydiver.png
                 <li><a href="http://libgdx.badlogicgames.com/gallery.html" target="_blank">Gallery of Libgdx Games</a></li>
             </ul>
         </p>
-		<h2>How it Works</h2>
+		<h2>How it works</h2>
 		<figure>
 		    <img src="https://raw.githubusercontent.com/wiki/libgdx/libgdx/images/modules-overview.png">
 		    <figcaption><i>Overview of Libgdx modules (<a href="https://github.com/libgdx/libgdx/wiki/Modules-overview" target="_blank">from wiki</a>)</i></figcaption>
 		</figure>
 		<p>Libgdx comprises several modules for input, graphics, files, audio, networking, game logic, and math/physics. It enables you to write code once and deploy it to multiple platforms without modification. High-level APIs simplify the rendering of 2D and 3D graphics, however Libgdx gives the option of working with OpenGL directly using Java interfaces. More information is available at the <a href="https://github.com/libgdx/libgdx/wiki" target="_blank">Libgdx wiki</a>.</p>
-        <h2>Creating the Skydiver 3D game</h2>
+        <h2>Libgdx design patterns</h2>
+		<p>A game is created using a single class that implements the ApplicationListener interface. It contains the following methods:</p>
+		<pre>
+		<code>
+		void create() //Called when the Application is first created.
+        void dispose() //Called when the Application is destroyed.
+        void pause() //Called when the Application is paused.
+        void render() //Called when the Application should render itself.
+        void resize(int width, int height) //Called when the Application is resized.
+        void resume() //Called when the Application is resumed from a paused state.
+		</code></pre>
+		<p>The create() method allows initialization of game resources by Libgdx, and the dispose() method is used to dispose of any resources which are not garbage collected by Java such as image textures. The render method allows access to the main game loop, which is an infinite loop that gets called each time the screen is ready to be updated.</p>
+		<p>Libgdx provides an interface to represent a screen with the following methods:</p>
+		<pre>
+		<code>
+		void dispose() // Called when this screen should release all resources.
+		void hide() //Called when this screen is no longer the current screen for a Game.
+		void pause() //Called when the Application is paused.
+		void render(float delta) // Called when the screen should render itself.
+		void resize(int width, int height)  //Called when the Application is resized.
+		void resume() //Called when the Application is resumed from a paused state.
+		void show() // Called when this screen becomes the current screen for a Game.
+		</code>
+		<p>Using the screen interface provides a framework to switch between activities with different user interfaces within a game by switching the current screen.</p>
+		</pre>
+        <p><a href="https://github.com/libgdx/libgdx/wiki/A-simple-game" target="_blank">This tutorial</a> describes how to create a minimalistic game.</p>
+		<h2>Creating the Skydiver 3D game</h2>
 		<p>The game consists of a skydiver who jumps off a plane from 14,000 feet and soars to the ground, earning points for collecting rings and stars. The player can optionally go faster by pressing a lightning bolt icon to get a bonus. Once the skydiver reaches an altitude of 3,000 feet, the player is prompted to open the parachute while an accuracy bar is displayed on the screen. Points are awarded based on the timing of the parachute opening. Once the parachute is opened, the player lands the skydiver on a target as close to the center as possible.</p>
         <p>The skydiver is represented by a 3D model which I created in <a href="https://www.blender.org/" target="_blank">Blender</a>. The model contains animations for opening the parachute and changing the pose of the skydiver to a diving position. The ring and star collectibles are represented by 2D images which are rendered using a perspective projection model, via the usage of a "Decal" class that represents a sprite in 3D space. The terrain is represented by a mesh of 3D locations and triangles. The <a href="http://en.wikipedia.org/wiki/Diamond-square_algorithm" target="_blank">diamond-square algorithm</a> is used for the procedural generation of a heightmap to create more realistic detail, and a custom OpenGL shader is used to apply a fog effect at high altitudes and allow blending of textures. Originally I had 3D models for the plane and the target, but these caused slow rendering performance in Android that caused the game to crash unexpectedly. The target is now a 2D texture that is generated procedurally. I am also working on the procedural generation of clouds using <a href="http://en.wikipedia.org/wiki/Perlin_noise" target="_blank">Perlin noise</a>, which is ideal for randomly generating natural textures when memory is limited.</p>
         <p>I implemented the model-view-controller design pattern to abstract away game logic from user input and rendering. The "model" consists of a World class which encapsulates the game objects and stores the state of the world. Libgdx is used to perform rendering and user input based on the current state of the world. A HUD is used to show the current game status.</p>
@@ -37,7 +63,7 @@ image: skydiver.png
         <p>A single class is used to manage loading game resources such as textures, models, and sounds so that resources are centralized within the game. Helper classes are also used to manage the playing of music and sound effects, store user preferences, and generate text dynamically from a FreeType font.</p>
         <p>One of the main issues that I encountered was that the behaviour of the game on Android varied significantly from desktop performance due to differences in processor speed and memory, so I would recommend anyone planning to use Libgdx for Android to test the game regularly on a real Android device and not an emulator. Additional care must be taken to reduce memory usage.</p>
         <h2>Conclusion</h2>
-        <p>The source code of the game is available at my <a href="https://github.com/mscarlett/Skydiver-3D" target="_blank">Github repo</a> if you want to try it yourself. I also hope to release the game on the Google Play Store in a month. I think that Libgdx is a fantastic library and would recommend it for anyone who wants to learn game development.</p>
+        <p>The source code of the game is available at my <a href="https://github.com/mscarlett/Skydiver-3D" target="_blank">Github repo</a> if you want to try it yourself or make your own copy. I also hope to release the game on the Google Play Store in a month. I think that Libgdx is a fantastic library and would recommend it for anyone who wants to learn game development.</p>
 	</div>
 </div> 
 
