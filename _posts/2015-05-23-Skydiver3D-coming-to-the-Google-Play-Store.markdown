@@ -26,7 +26,7 @@ image: skydiver.png
 		<h2>How it Works</h2>
 		<figure>
 		    <img src="https://raw.githubusercontent.com/wiki/libgdx/libgdx/images/modules-overview.png" width="420">
-		    <figcaption>Overview of Libgdx modules from their <a href="https://github.com/libgdx/libgdx/wiki/Modules-overview" target="_blank">wiki page</a></figcaption>
+		    <figcaption>Diagram of Libgdx modules from <a href="https://github.com/libgdx/libgdx/wiki/Modules-overview" target="_blank">wiki page</a></figcaption>
 		</figure>
 		<p>Libgdx comprises several modules for input, graphics, files, audio, networking, game logic, and math/physics. It enables you to write code once and deploy it to multiple platforms without modification. High-level APIs simplify the rendering of 2D and 3D graphics, however Libgdx gives the option of working with OpenGL directly using Java interfaces.</p>
 	</div>
