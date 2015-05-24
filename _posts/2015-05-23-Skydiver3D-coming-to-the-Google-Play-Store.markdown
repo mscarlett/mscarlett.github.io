@@ -60,7 +60,7 @@ image: skydiver.png
         <p>A single class is used to manage loading game resources such as textures, models, and sounds so that resources are centralized within the game. Helper classes are also used to manage the playing of music and sound effects, store user preferences, and generate text dynamically from a FreeType font.</p>
         <p>One of the main issues that I encountered was that the behaviour of the game on Android varied significantly from desktop performance due to differences in processor speed and memory, so I would recommend anyone planning to use Libgdx for Android to test the game regularly on a real Android device and not an emulator. Additional care must be taken to reduce memory usage.</p>
         <h2>Conclusion</h2>
-        <p>The source code of the game is available at my <a href="https://github.com/mscarlett/Skydiver-3D" target="_blank">Github repo</a> if you want to try it yourself or make your own copy. I also hope to release the game on the Google Play Store in a month. I think that Libgdx is a fantastic library and would recommend it for anyone who wants to learn game development.</p>
+        <p>The source code of the game is available at my <a href="https://github.com/mscarlett/Skydiver-3D" target="_blank">Github repo</a> if you want to try it yourself. I also hope to release the game on the Google Play Store in a month. I think that Libgdx is a fantastic library and would recommend it for anyone who wants to learn game development.</p>
 	</div>
 </div> 
 
