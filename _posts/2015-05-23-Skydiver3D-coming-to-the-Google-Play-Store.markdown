@@ -15,7 +15,7 @@ image: skydiver.png
 	<div class="span9 columns">
 		<iframe width="420" height="315" src="https://www.youtube.com/embed/-NmvwspVKGo" frameborder="0" allowfullscreen></iframe>
 		<h2>Preface</h2>
-		<p>This past year, I have been experimenting with Java/Android game development by working on a skydiving game. The game uses <a href="http://libgdx.badlogicgames.com/" target="_blank">Libgdx</a>, which provides a unified API that runs on many platforms and abstracts away the low-level graphics implementation to allow for rapid prototyping. The library uses the JNI to provide access to native C code for OpenGL graphics rendering and accelerated math operations. Libgdx also features an API designed to avoid JVM garbage collection by using a custom implementation for loading and deletion game resources. This post will explore the Libgdx framework briefly and provide more details regarding the game that I am planning to release.</p>
+		<p>This past year, I have been experimenting with Java/Android game development by working on a skydiving game. The game uses <a href="http://libgdx.badlogicgames.com/" target="_blank">Libgdx</a>, which provides a unified API that runs on many platforms and abstracts away the low-level graphics implementation to allow for rapid prototyping. The library uses the JNI to provide access to native C code for OpenGL graphics rendering and accelerated math operations. Libgdx also features an API designed to avoid JVM or Android garbage collection by using a custom implementation for loading and deletion game resources. This post will explore the Libgdx framework briefly and provide more details regarding the game that I am planning to release.</p>
         <p>
             <ul>
                 <li><a href="http://libgdx.badlogicgames.com/documentation.html" target="_blank">Libgdx Getting Started</a></li>
@@ -29,6 +29,8 @@ image: skydiver.png
 		    <figcaption><i>Overview of Libgdx modules (<a href="https://github.com/libgdx/libgdx/wiki/Modules-overview" target="_blank">from wiki</a>)</i></figcaption>
 		</figure>
 		<p>Libgdx comprises several modules for input, graphics, files, audio, networking, game logic, and math/physics. It enables you to write code once and deploy it to multiple platforms without modification. High-level APIs simplify the rendering of 2D and 3D graphics, however Libgdx gives the option of working with OpenGL directly using Java interfaces. More information is available at the <a href="https://github.com/libgdx/libgdx/wiki" target="_blank">Libgdx wiki</a>.</p>
+        <h2>Creating the Skydiver 3D game</h2>
+		<p>Placeholder text</p>
 	</div>
 </div> 
 
