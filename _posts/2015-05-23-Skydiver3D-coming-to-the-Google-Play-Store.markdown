@@ -32,7 +32,7 @@ image: skydiver.png
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
 			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-			var disqus_shortname = 'ericjones'; // required: replace example with your forum shortname
+			var disqus_shortname = 'mscarlett'; // required: replace example with your forum shortname
 			var disqus_identifier = '{{ page.url }}';
 			var disqus_url = 'http://mscarlett.github.io{{ page.url }}';
 			
