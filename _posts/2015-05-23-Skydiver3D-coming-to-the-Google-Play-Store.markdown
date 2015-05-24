@@ -15,6 +15,7 @@ image: skydiver.png
 	<div class="span9 columns">
 		<iframe width="420" height="315" src="https://www.youtube.com/embed/-NmvwspVKGo" frameborder="0" allowfullscreen></iframe>
 		<h2>Preface</h2>
+		<p>This past year, I have been experimenting with Java/Android game development by working on a skydiving game. The game uses the <a href="http://libgdx.badlogicgames.com/" target="_blank">libgdx</a> library, which provides a single API that runs on many platforms and abstracts away the low-level graphics implementation to allow for rapid prototyping. The library uses the JNI to provide access to native C code for OpenGL graphics rendering and accelerated math operations. libgdx also features an API designed to avoid JVM garbage collection by using a custom framework for loading and deletion game resources.</p>
 	</div>
 </div> 
 
