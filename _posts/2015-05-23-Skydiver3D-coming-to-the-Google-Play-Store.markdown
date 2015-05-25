@@ -2,7 +2,7 @@
 layout: post
 title: Skydiver 3D coming to the Google Play Store
 category: Coding
-tags: android gaming libgdx opengl
+tags: android gaming graphics libgdx opengl
 year: 2015
 month: 5
 day: 23
