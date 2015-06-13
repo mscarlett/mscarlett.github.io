@@ -13,9 +13,8 @@ image: insilico.png
 
 <div class="row">	
 	<div class="span9 columns">
-		<iframe width="420" height="315" src="https://www.youtube.com/embed/-NmvwspVKGo" frameborder="0" allowfullscreen></iframe>
 		<h2>A Software Engineer Who Wants to Save Lives -- Recent College Graduate and Insilico Medicine Intern Prepares for a Career in Bioinformatics</h2>
-		<p>Source: <a href="http://www.reuters.com/article/2015/06/11/idUSnGNX21Vvv+e4+GNW20150611" target="_blank">Reuters Newswire</a></p>
+		<p><i>Source: <a href="http://www.reuters.com/article/2015/06/11/idUSnGNX21Vvv+e4+GNW20150611" target="_blank">Reuters Newswire</a></i></p>
 		<p>BALTIMORE, Md., June 11, 2015 (GLOBE NEWSWIRE) -- via PRWEB - Since the dawn of the internet, computer scientists graduating from universities throughout the US have set their sights on Silicon Valley, focusing on careers in business and internet startups.</p>
         <p>In recent years, however, a growing number of graduates, like 22-year old Michael Scarlett, a recent graduate of Johns Hopkins University, have more altruistic goals in mind. Scarlett plans to work in the fast growing industry of bioinformatics.</p>
         <p>Why are software engineers like Scarlett launching careers in bioinformatics? "Software will transform medicine the same way it's transforming our daily lives," said Scarlett. "It's exciting to know that biological discoveries I'll be working on may one day save lives; I believe the most powerful tool in making these discoveries will be the computer, not the microscope."</p>
