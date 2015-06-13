@@ -7,7 +7,7 @@ year: 2015
 month: 6
 day: 11
 published: true
-summary: A news article about my experience with InSilico Medicine and motivations for the future. I have spent the past year with the company as an intern and am continuing to work as a software engineer.
+summary: A news article about my experience with InSilico Medicine and motivations for the future. I have spent the past year with the company as an intern and continue to work as a software engineer.
 image: insilico.png
 ---
 
