@@ -7,7 +7,7 @@ year: 2015
 month: 6
 day: 11
 published: true
-summary: I am currently developing a tool that mimics the SSH protocol for secure, remote execution of shell commands between two computers. The goal is to circumvent firewalls and NAT to make it simple to execute shell commands remotely.
+summary: I am currently developing a tool that mimics the SSH protocol for secure, remote execution of shell commands and circumvention of firewalls and NAT.
 image: sshgenie.png
 ---
 
