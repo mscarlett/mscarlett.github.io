@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SSH Genie - a tool to remotely execute SSH commands using a P2P network
+title: SSH Genie - a tool to remotely execute SSH commands using a P2P connection
 category: Coding
 tags: networking p2p remote-access
 year: 2015

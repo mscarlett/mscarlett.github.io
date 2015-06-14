@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Software Engineer Who Wants to Save Lives
+title: A software engineer who wants to save lives
 category: Coding
 tags: work bioinformatics
 year: 2015
