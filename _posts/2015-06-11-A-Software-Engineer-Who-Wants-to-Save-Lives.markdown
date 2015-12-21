@@ -7,7 +7,7 @@ year: 2015
 month: 6
 day: 11
 published: true
-summary: News article about my experience with InSilico Medicine, a bioinformatics company based in Baltimore.
+summary: News article about my experience with InSilico Medicine, a bioinformatics tech startup based in Baltimore.
 image: insilico.png
 ---
 
