@@ -1,29 +1,36 @@
-<div class="navbar navbar-default">
-   <div class="container-fluid">
-      <div class="navbar-header">
-         <a class="navbar-brand" href="http://mscarlett.github.io">Yet another blog</a>
-      </div>
-      <ul class="nav navbar-nav">
-         <li>
-            <a href="http://mscarlett.github.io"><i class="icon-home"></i>Home</a>
+<!-- Static navbar -->
+ <nav class="navbar navbar-default navbar-static-top">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand" href="http://mscarlett.github.io">Yet another blog</a>
+     </div>
+     <div id="navbar" class="navbar-collapse collapse">
+       <ul class="nav navbar-nav">
+         <li><a href="http://mscarlett.github.io">Home</a></li>
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="http://www.twitter.com/mike_scarlett_" rel="tooltip" title="Go to twitter.com/mike_scarlett_" target="_blank">Twitter</a></li>
+             <li><a href="http://github.com/mscarlett" rel="tooltip" title="Go to github.com/mscarlett" target="_blank">GitHub</a></li>
+             <li><a href="https://www.linkedin.com/pub/michael-scarlett/65/208/2a4" rel="tooltip" title="Go to LinkedIn profile" target="_blank">LinkedIn</a></li>
+             <li><a href="https://www.facebook.com/M.ScarlettFever" rel="tooltip" title="Go to Facebook profile" target="_blank">Facebook</a></li>
+           </ul>
          </li>
-         <li class="dropdown-header">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment"><b class="caret"></b></i>Social</a>
-            <ul class="dropdown-menu">
-               <li><a href="http://www.twitter.com/mike_scarlett_" rel="tooltip" title="Go to twitter.com/mike_scarlett_" target="_blank">Twitter</a></li>
-               <li><a href="http://github.com/mscarlett" rel="tooltip" title="Go to github.com/mscarlett" target="_blank">GitHub</a></li>
-               <li><a href="https://www.linkedin.com/pub/michael-scarlett/65/208/2a4" rel="tooltip" title="Go to LinkedIn profile" target="_blank">LinkedIn</a></li>
-               <li><a href="https://www.facebook.com/M.ScarlettFever" rel="tooltip" title="Go to Facebook profile" target="_blank">Facebook</a></li>
-            </ul>
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="https://github.com/mscarlett/Skydiver-3D" rel="tooltip" title="Go to Skydiver-3D on GitHub" target="_blank">Skydiver 3D</a></li>
+             <li><a href="https://github.com/mscarlett/ssh-genie" rel="tooltip" title="Go to ssh genie on GitHub" target="_blank">SSH Genie</a></li>
+             <li><a href="https://github.com/mscarlett/Seizure-Prediction" rel="tooltip" title="Go to Seizure-Prediction on GitHub" target="_blank">Kaggle Seizure Prediction</a></li>
+           </ul>
          </li>
-         <li class="dropdown-header">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"><b class="caret"></b></i>Projects</a>
-            <ul class="dropdown-menu">
-               <li><a href="https://github.com/mscarlett/Skydiver-3D" rel="tooltip" title="Go to Skydiver-3D on GitHub" target="_blank">Skydiver 3D</a></li>
-               <li><a href="https://github.com/mscarlett/ssh-genie" rel="tooltip" title="Go to ssh genie on GitHub" target="_blank">SSH Genie</a></li>
-               <li><a href="https://github.com/mscarlett/Seizure-Prediction" rel="tooltip" title="Go to Seizure-Prediction on GitHub" target="_blank">Kaggle Seizure Prediction</a></li>
-            </ul>
-         </li>
-      </ul>
+       </ul>
+     </div><!--/.nav-collapse -->
    </div>
-</div>
+ </nav>
